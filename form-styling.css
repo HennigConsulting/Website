@@ -16,7 +16,7 @@ label {
 label {
   display: block;
   margin-bottom: 4px !important;
-  margin-top: -24px !important; /* nach oben ziehen */
+  margin-top: -20px !important; /* nach oben ziehen */
   font-weight: 500;
 }
 
