@@ -111,7 +111,40 @@ label[for] {
     font-size: 1rem;
   }
 }
-#tbl_tr_vorvers5 .cell.sp1 {
-  order: 1;
-  margin-bottom: 6px;
+/* --- 1. Zeilen-Layout anpassen --- */
+.line {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem; /* Abstand zwischen den Zeilen */
 }
+
+/* --- 2. Label-Container --- */
+.cell.sp1 {
+  order: 1; /* Label soll oben stehen */
+  margin-bottom: 4px;
+}
+
+/* --- 3. Info-Icon (falls nötig) --- */
+.cell.sp3 {
+  order: 2;
+  align-self: flex-end; /* rechtsbündig oder weglassen */
+  margin-bottom: 4px;
+}
+
+/* --- 4. Input-Feld --- */
+.cell.sp2 {
+  order: 3;
+}
+
+/* --- Optional: Input-Feld selbst (z. B. <select>) hübscher machen --- */
+select.form-select,
+input,
+textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
