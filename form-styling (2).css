@@ -1,0 +1,104 @@
+
+/* Allgemeines Layout */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fafaff;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Formular Container */
+#hundeformular {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 24px;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+/* Überschriften */
+#hundeformular h2,
+#hundeformular h3 {
+    font-weight: 600;
+    color: #0D244F;
+    margin-bottom: 12px;
+}
+
+/* Labels */
+#hundeformular label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #0D244F;
+}
+
+/* Eingabefelder */
+#hundeformular input[type="text"],
+#hundeformular input[type="date"],
+#hundeformular select {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 0.95rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    background-color: #fff;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* Radiobuttons & Checkboxen */
+#hundeformular input[type="radio"],
+#hundeformular input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+/* Buttons */
+#hundeformular button,
+#hundeformular input[type="submit"] {
+    background-color: #4A86D4;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+#hundeformular button:hover,
+#hundeformular input[type="submit"]:hover {
+    background-color: #0D244F;
+}
+
+/* X entfernen */
+#hundeformular .close,
+#hundeformular .remove-button,
+#hundeformular .tarifrechner-remove,
+.x {
+    display: none !important;
+}
+
+/* FAQ-Links */
+#hundeformular a {
+    color: #0D244F;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+/* Abstände zwischen Label und Feld reduzieren */
+#hundeformular label + input,
+#hundeformular label + select {
+    margin-top: 4px;
+}
+
+/* Erstinformation optisch reduzieren */
+#hundeformular .erstinformation {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 16px;
+}
