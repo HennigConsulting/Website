@@ -10,7 +10,7 @@
 /* Label über das Eingabefeld */
 .cell.sp1 {
   order: 1;
-  margin-bottom: 1px;
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 1rem;
   color: #0D244F;
