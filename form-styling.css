@@ -1,179 +1,120 @@
+/* ==== TARIFCHECK FORMULAR OVERRIDES ==== */
 
-/* Allgemeines Layout */
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #fafaff;
-    color: #333333;
-    margin: 0;
-    padding: 0;
-}
-
-/* Formular Container */
-#hundeformular {
-    background-color: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    padding: 24px;
-    max-width: 800px;
-    margin: 40px auto;
-}
-
-/* Ãœberschriften */
-#hundeformular h2,
-#hundeformular h3 {
-    font-weight: 600;
-    color: #0D244F;
-    margin-bottom: 12px;
-}
-
-/* Labels */
-#hundeformular label {
-    display: block;
-    margin-bottom: 4px;
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: #0D244F;
-}
-
-/* Eingabefelder */
-#hundeformular input[type="text"],
-#hundeformular input[type="date"],
-#hundeformular select {
-    width: 100%;
-    padding: 10px 12px;
-    font-size: 0.95rem;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    margin-bottom: 16px;
-    background-color: #fff;
-    color: #333;
-    box-sizing: border-box;
-}
-
-/* Radiobuttons & Checkboxen */
-#hundeformular input[type="radio"],
-#hundeformular input[type="checkbox"] {
-    margin-right: 6px;
-}
-
-/* Buttons */
-#hundeformular button,
-#hundeformular input[type="submit"] {
-    background-color: #4A86D4;
-    color: #fff;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
-}
-
-#hundeformular button:hover,
-#hundeformular input[type="submit"]:hover {
-    background-color: #0D244F;
-}
-
-/* X entfernen */
-#hundeformular .close,
-#hundeformular .remove-button,
-#hundeformular .tarifrechner-remove,
-.x {
-    display: none !important;
-}
-
-/* FAQ-Links */
-#hundeformular a {
-    color: #0D244F;
-    text-decoration: underline;
-    font-weight: 500;
-}
-
-/* AbstÃ¤nde zwischen Label und Feld reduzieren */
-#hundeformular label + input,
-#hundeformular label + select {
-    margin-top: 4px;
-}
-
-/* Erstinformation optisch reduzieren */
-#hundeformular .erstinformation {
-    font-size: 0.85rem;
-    color: #666;
-    margin-top: 16px;
-}
-
-
-
-/* Verbesserte Darstellung: Beschriftung Ã¼ber dem Feld */
+/* Einheitliches Layout für Labels */
 label {
   display: block;
-  margin-bottom: 6px !important;
   font-weight: 500;
-  font-size: 1rem;
-  color: #222;
+  margin: 0 0 6px 0 !important;
+  font-family: "Poppins", sans-serif;
 }
 
-/* Eingabefelder */
+/* Eingabefelder sauber darunter platzieren */
 input,
 select,
 textarea {
-  display: block;
-  margin-bottom: 1.5rem;
+  margin: 0 0 20px 0 !important;
   padding: 12px;
   border-radius: 8px;
   border: 1px solid #ccc;
   width: 100%;
   box-sizing: border-box;
   font-size: 1rem;
+  font-family: "Poppins", sans-serif;
 }
 
-/* Radio-Buttons & Checkboxen besser ausrichten */
-input[type="radio"],
-input[type="checkbox"] {
-  margin-right: 8px;
+/* Formular-Box modern und rund */
+.form-box,
+.tarif-box,
+.rechner-wrapper {
+  border-radius: 16px !important;
+  padding: 1.5rem !important;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-input[type="radio"] + label,
-input[type="checkbox"] + label {
-  display: inline-block;
-  margin-right: 1rem;
-  vertical-align: middle;
-  font-weight: 400;
+/* Button gestalten */
+button,
+input[type="submit"] {
+  background-color: #4A86D4;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  margin-top: 12px;
 }
 
-/* Blockhafte Gruppierung */
-fieldset {
-  margin-bottom: 1.5rem;
+button:hover,
+input[type="submit"]:hover {
+  background-color: #376ab5;
 }
 
-/* Close-Button (X) oben rechts verschieben */
-button[aria-label="SchlieÃŸen"],
+/* "X" oben rechts dezenter oben rechts */
+button[aria-label="Schließen"],
 button[class*="close"],
 button[class*="Close"] {
   position: absolute !important;
-  top: 8px;
-  right: 12px;
-  background: none !important;
-  font-size: 1.5rem;
-  color: #999;
-  z-index: 10;
+  top: 10px !important;
+  right: 10px !important;
+  background: none;
+  color: #ccc;
+  font-size: 1.2rem;
+  border: none;
 }
 
-/* Optional kompakterer Abstand fÃ¼r Labels und Inputs */
-.form-box label,
-.form-box input,
-.form-box select {
-  margin-top: 0 !important;
-  margin-bottom: 0.5rem !important;
-}
-
-/* Erstinformationen etwas dezenter */
+/* Erstinformation: kleiner und dezenter */
 [id*="erstinformation"],
 [id*="beratung"] {
-  font-size: 0.9rem !important;
-  color: #555 !important;
-  line-height: 1.5;
+  font-size: 0.85rem !important;
+  color: #666 !important;
+  line-height: 1.4;
   max-width: 800px;
   margin: 2rem auto;
+}
+
+/* Radiobuttons korrekt linksbündig */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+label[for]:has(input[type="radio"]),
+label[for]:has(input[type="checkbox"]) {
+  display: flex;
+  align-items: center;
+}
+
+/* Fragen-Links */
+.faq-section a {
+  font-size: 0.9rem;
+  color: #1a3e72;
+  text-decoration: underline;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+/* Gesamtbreite einschränken */
+.rechner-wrapper,
+.rechner-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Mobile Ansicht */
+@media (max-width: 768px) {
+  .form-box,
+  .tarif-box,
+  .rechner-wrapper {
+    padding: 1rem !important;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    font-size: 1rem;
+  }
 }
