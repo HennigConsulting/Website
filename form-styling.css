@@ -5,13 +5,19 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Allgemeine AbstÃ¤nde fÃ¼r Labels */
+/* Allgemeine AbstÃ¤nde fÃ¼r Labels 
 label {
   display: block;
   margin-bottom: 6px !important;
   font-weight: 500;
   font-size: 1rem;
   color: #0d244f;
+} */
+label {
+  display: block;
+  margin-bottom: 4px !important;
+  margin-top: -24px !important; /* nach oben ziehen */
+  font-weight: 500;
 }
 
 /* Eingabefelder gestalten */
