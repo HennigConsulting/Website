@@ -47,7 +47,7 @@ input::before,
 select::before,
 textarea::before {
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 10px;
   content: attr(data-label); /* nur wenn du es per HTML setzen kannst */
 }
 
