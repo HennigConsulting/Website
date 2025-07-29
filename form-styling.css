@@ -43,6 +43,14 @@ textarea {
   font-size: 1rem;
 }
 
+input::before,
+select::before,
+textarea::before {
+  display: block;
+  margin-bottom: 4px;
+  content: attr(data-label); /* nur wenn du es per HTML setzen kannst */
+}
+
 
 
 /* Eingabefelder sauber darunter platzieren */
