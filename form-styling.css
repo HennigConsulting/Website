@@ -5,7 +5,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Allgemeine Abstände für Labels */
+/* Allgemeine AbstÃ¤nde fÃ¼r Labels */
 label {
   display: block;
   margin-bottom: 6px !important;
@@ -42,7 +42,7 @@ textarea {
   margin: auto;
 }
 
-/* Überschriften optisch anpassen */
+/* Ãœberschriften optisch anpassen */
 h2,
 h3,
 h4 {
@@ -50,7 +50,7 @@ h4 {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Radiobuttons und Checkboxen linksbündig */
+/* Radiobuttons und Checkboxen linksbÃ¼ndig */
 input[type="radio"],
 input[type="checkbox"] {
   margin-right: 8px;
@@ -84,7 +84,7 @@ input[type="submit"]:hover {
 }
 
 /* "X" oben rechts entfernen */
-button[aria-label="Schließen"],
+button[aria-label="SchlieÃŸen"],
 button[class*="close"],
 button[class*="Close"] {
   display: none !important;
@@ -112,14 +112,14 @@ a[href*="versicherung"] {
   margin-bottom: 4px;
 }
 
-/* Optional: Gesamtbreite etwas einschränken */
+/* Optional: Gesamtbreite etwas einschrÃ¤nken */
 .rechner-wrapper,
 .rechner-container {
   max-width: 900px;
   margin: auto;
 }
 
-/* Für mobile Ansicht */
+/* FÃ¼r mobile Ansicht */
 @media (max-width: 768px) {
   .form-box,
   .tarif-box,
