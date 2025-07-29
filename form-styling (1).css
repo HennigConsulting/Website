@@ -1,0 +1,52 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body, input, select, textarea, button {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #333333;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+form {
+  background-color: #FAFAFF;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+}
+
+label {
+  font-weight: 500;
+  margin-top: 12px;
+  display: block;
+  color: #0D244F;
+}
+
+button, input[type="submit"] {
+  background-color: #4A86D4;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #0D244F;
+}
