@@ -4,12 +4,13 @@
 label {
   display: block;
   font-weight: 500;
-  margin: 0 0 20px 0 !important;
+  margin: 0 0 10px 0 !important;
   font-family: "Poppins", sans-serif;
 }
 
 .sub-sub-header {
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /* Eingabefelder sauber darunter platzieren */
