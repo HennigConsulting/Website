@@ -8,6 +8,10 @@ label {
   font-family: "Poppins", sans-serif;
 }
 
+.sub-sub-header {
+  margin-top: 20px;
+}
+
 /* Eingabefelder sauber darunter platzieren */
 input,
 select,
