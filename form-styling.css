@@ -1,11 +1,46 @@
 /* ==== TARIFCHECK FORMULAR OVERRIDES ==== */
 
-/* Einheitliches Layout für Labels */
+/* Einheitliches Layout für Labels 
 label {
   display: block;
   font-weight: 500;
   margin: 2px 0 5px 0 !important;
   font-family: "Poppins", sans-serif;
+} */
+
+/* Bessere Zuordnung: Label über dem Eingabefeld, enger Abstand */
+label {
+  display: block;
+  margin-top: 1.5rem; /* Abstand zur vorherigen Eingabe */
+  margin-bottom: 4px; /* kleiner Abstand zum zugehörigen Eingabefeld */
+  font-weight: 500;
+  font-size: 1rem;
+  color: #0d244f;
+}
+/* entfernt überflüssigen Abstand 
+input,
+select,
+textarea {
+  margin: 0 !important; 
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+*/
+
+input,
+select,
+textarea {
+  margin: 0 !important; /* entfernt überflüssigen Abstand */
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
 }
 
 
