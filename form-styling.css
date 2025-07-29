@@ -4,14 +4,11 @@
 label {
   display: block;
   font-weight: 500;
-  margin: 0 0 10px 0 !important;
+  margin: 2px 0 5px 0 !important;
   font-family: "Poppins", sans-serif;
 }
 
-.sub-sub-header {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
+
 
 /* Eingabefelder sauber darunter platzieren */
 input,
@@ -35,6 +32,11 @@ textarea {
   padding: 1.5rem !important;
   background-color: #ffffff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.rechner-wrapper label:first-child {
+  color: #4A86D4;
+  
 }
 
 /* Button gestalten */
