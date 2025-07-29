@@ -5,6 +5,10 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.line {
+  margin-top: 20px;
+}
+
 /* Eingabefelder */
 input,
 select,
@@ -25,7 +29,7 @@ textarea {
   display: block;
   font-size: 1rem;
   font-weight: 500;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
   color: #0D244F;
 }
 
