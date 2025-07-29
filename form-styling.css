@@ -10,11 +10,12 @@
 /* Label über das Eingabefeld */
 .cell.sp1 {
   order: 1;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   font-weight: 500;
   font-size: 1rem;
   color: #0D244F;
 }
+
 
 /* Info-Icon optisch darunter oder weglassen */
 .cell.sp3 {
