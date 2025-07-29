@@ -61,3 +61,15 @@ input[type="checkbox"] {
   margin-right: 8px;
   vertical-align: middle;
 }
+
+/* Abstand zwischen Label und Eingabefeld verringern */
+label {
+  margin-bottom: 6px !important;
+}
+
+input,
+select,
+textarea {
+  margin-top: 0px !important;
+  margin-bottom: 16px !important;
+}
