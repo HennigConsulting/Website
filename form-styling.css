@@ -13,7 +13,7 @@ input,
 select,
 textarea {
   display: block;
-  margin-bottom: 10px !important;
+  margin-bottom: 5px !important;
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
