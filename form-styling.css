@@ -102,3 +102,78 @@ body {
     color: #666;
     margin-top: 16px;
 }
+
+
+
+/* Verbesserte Darstellung: Beschriftung Ã¼ber dem Feld */
+label {
+  display: block;
+  margin-bottom: 6px !important;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #222;
+}
+
+/* Eingabefelder */
+input,
+select,
+textarea {
+  display: block;
+  margin-bottom: 1.5rem;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+/* Radio-Buttons & Checkboxen besser ausrichten */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  display: inline-block;
+  margin-right: 1rem;
+  vertical-align: middle;
+  font-weight: 400;
+}
+
+/* Blockhafte Gruppierung */
+fieldset {
+  margin-bottom: 1.5rem;
+}
+
+/* Close-Button (X) oben rechts verschieben */
+button[aria-label="SchlieÃŸen"],
+button[class*="close"],
+button[class*="Close"] {
+  position: absolute !important;
+  top: 8px;
+  right: 12px;
+  background: none !important;
+  font-size: 1.5rem;
+  color: #999;
+  z-index: 10;
+}
+
+/* Optional kompakterer Abstand fÃ¼r Labels und Inputs */
+.form-box label,
+.form-box input,
+.form-box select {
+  margin-top: 0 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Erstinformationen etwas dezenter */
+[id*="erstinformation"],
+[id*="beratung"] {
+  font-size: 0.9rem !important;
+  color: #555 !important;
+  line-height: 1.5;
+  max-width: 800px;
+  margin: 2rem auto;
+}
