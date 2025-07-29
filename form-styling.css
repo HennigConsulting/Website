@@ -14,7 +14,7 @@ label {
 input,
 select,
 textarea {
-  margin: 0 0 5px 0 !important;
+  margin: 0 0 0 0 !important;
   padding: 12px;
   border-radius: 8px;
   border: 1px solid #ccc;
@@ -34,10 +34,7 @@ textarea {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.rechner-wrapper label:first-child {
-  color: #4A86D4;
-  
-}
+
 
 /* Button gestalten */
 button,
