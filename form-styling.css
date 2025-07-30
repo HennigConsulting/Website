@@ -1,40 +1,50 @@
-/* ==== TARIFCHECK FORMULAR STYLING ==== */
+/* ==== TARIFCHECK FORMULAR STYLING v13 ==== */
 
 /* Schriftart */
 body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Einzelne Formularzeile */
+/* Gesamtbox */
+.rechner-wrapper,
+.rechner-container,
+.form-box {
+  background-color: #f5f7f9;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Zeilen */
 .line {
   margin-top: 20px;
+  margin-bottom: 12px;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  text-align: left;
 }
 
-/* Label (links oben) */
+/* Label (z. B. „Gewünschter Versicherungsbeginn“) */
 .cell.sp1 {
   width: 100%;
   font-size: 1rem;
   font-weight: 500;
   color: #0D244F;
   margin-bottom: 6px;
+  margin-top: 4px;
 }
 
-/* Eingabefeld */
+/* Input-Bereich */
 .cell.sp2,
 .cell.col1-data {
   width: 100%;
   margin-bottom: 20px;
 }
 
-/* Info-Icon */
-.cell.sp3 {
-  display: none; /* ausblenden falls gewünscht */
-}
-
-/* Eingabefeld Gestaltung */
+/* Eingabefelder */
 input,
 select,
 textarea {
@@ -45,83 +55,84 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 8px;
   box-sizing: border-box;
-  margin-bottom: 4px;
+  margin-top: 4px;
 }
 
-/* Button */
+/* Buttons */
 button,
 input[type="submit"] {
   background-color: #4A86D4;
   color: #fff;
-  padding: 10px 20px;
+  padding: 12px 24px;
   font-size: 1rem;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: 20px;
 }
 button:hover,
 input[type="submit"]:hover {
   background-color: #376ab5;
 }
 
-/* Formularbox außen */
-.rechner-wrapper,
-.rechner-container,
-.form-box {
-  background-color: #f5f7f9;
-  padding: 1.5rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  max-width: 900px;
-  margin: auto;
-}
-
-/* Abstand vor dem Formularbereich */
-.rechner-wrapper p,
-.rechner-wrapper h2,
-.rechner-wrapper h3 {
-  margin-bottom: 1.2rem;
-}
-
-/* Labels & Inputs mit etwas weniger Abstand dazwischen */
-.cell.sp1 + .cell.sp2 {
-  margin-top: -6px;
-}
-
-/* Checkboxen und Radiobuttons korrekt linksbündig */
-input[type="checkbox"],
-input[type="radio"] {
-  margin-right: 8px;
-  vertical-align: middle;
-  display: inline-block;
-}
-
-/* Elternelemente für Checkbox-/Radio-Bereiche */
-.erstInfoChkBox,
-.erstInfoChkBox label,
-.rechner-wrapper label {
-  display: block;
-  text-align: left !important;
-  margin: 12px 0;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-/* Radiobutton-Optionen */
-input[type="radio"] + label,
-input[type="checkbox"] + label {
-  display: inline;
-}
-
-/* Schließen-X entfernen */
+/* Entferne das "X" (Schließen-Button bei Popups) */
 button[aria-label="Schließen"],
 button[class*="close"],
 button[class*="Close"] {
   display: none !important;
 }
 
-/* Mobile Optimierung */
+/* Info-Icons optional ausblenden */
+.cell.sp3 {
+  display: none;
+}
+
+/* Paragraphen vor dem Formular */
+.rechner-wrapper p,
+.rechner-container p,
+.form-box p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Zwischenüberschrift */
+.zwischenueberschrift {
+  margin-top: 24px;
+  font-weight: bold;
+}
+
+/* Checkboxen & Radiobuttons – korrekt linksbündig */
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  margin-left: 0;
+  margin-top: 2px;
+}
+
+/* Label mit Checkboxen / Radiobuttons */
+label {
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  gap: 8px;
+  line-height: 1.5;
+  font-weight: normal;
+  margin-bottom: 16px;
+}
+
+/* Optional: spezifische Labels in Checkboxblöcken */
+.erstInfoChkBox,
+.erstInfoChkBox label {
+  display: block;
+  text-align: left !important;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+/* Mobiloptimierung */
 @media (max-width: 768px) {
   .line {
     flex-direction: column;
@@ -141,36 +152,4 @@ button[class*="Close"] {
   .rechner-wrapper {
     padding: 1rem;
   }
-}
-
-/* Checkboxen und Radiobuttons linksbündig mit Text */
-input[type="checkbox"],
-input[type="radio"] {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 8px;
-  margin-left: 0;
-}
-
-/* Labels mit Checkboxen und Radios */
-label {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  text-align: left;
-  line-height: 1.4;
-  font-weight: normal;
-}
-
-/* Umbruch bei langen Texten sauber */
-label input[type="checkbox"],
-label input[type="radio"] {
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-/* Zeilenweise Abstand */
-.line {
-  margin-top: 18px;
-  margin-bottom: 18px;
 }
