@@ -153,25 +153,33 @@ label {
     padding: 1rem;
   }
 }
-/* Checkboxen & Radiobuttons: korrekt linksbündig */
+/* === Checkboxen und Radiobuttons korrekt linksbündig === */
+
 input[type="checkbox"],
 input[type="radio"] {
   margin-right: 8px;
   vertical-align: middle;
-}
-
-/* Nur Labels mit Checkbox oder Radio: linksbündig anordnen */
-label input[type="checkbox"],
-label input[type="radio"] {
   display: inline-block;
-  vertical-align: middle;
 }
 
-label.checkbox-label,
-label.radio-label {
+label {
   display: inline-block;
   text-align: left;
+  vertical-align: middle;
+  line-height: 1.5;
   font-weight: normal;
-  margin-bottom: 12px;
-  line-height: 1.4;
+  max-width: 100%;
+  white-space: normal;
 }
+input[type="checkbox"],
+input[type="radio"] {
+  float: none !important;
+  margin-left: 0 !important;
+}
+
+label {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+}
+
