@@ -5,15 +5,43 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+/* Zeilenaufbau für Label + Eingabefeld nebeneinander */
 .line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
   margin-top: 20px;
+  gap: 1rem;
 }
 
-/* Eingabefelder */
+/* Label links */
+.cell.sp1 {
+  flex: 1 1 30%;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #0D244F;
+  padding-top: 12px;
+  min-width: 180px;
+}
+
+/* Tooltip rechts neben Label (Infoicon) */
+.col1-info {
+  flex: 0 0 auto;
+  padding-top: 14px;
+}
+
+/* Eingabefeld rechts */
+.cell.sp2,
+.col1-data {
+  flex: 1 1 60%;
+  margin-bottom: 20px;
+  min-width: 220px;
+}
+
+/* Eingabefeld */
 input,
 select,
 textarea {
-  display: block;
   width: 100%;
   padding: 10px;
   font-size: 1rem;
@@ -21,22 +49,6 @@ textarea {
   border-radius: 8px;
   box-sizing: border-box;
   margin-top: 4px;
-  margin-bottom: 10px;
-}
-
-/* Labels über Feldern, mit Abstand */
-.cell.sp1 {
-  display: block;
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 4px;
-  color: #0D244F;
-}
-
-/* Eingabefelder Wrapper */
-.cell.sp2 {
-  display: block;
-  margin-bottom: 24px;
 }
 
 /* Button */
@@ -63,7 +75,7 @@ button[class*="Close"] {
   display: none !important;
 }
 
-/* Box außenrum */
+/* Formularcontainer */
 .rechner-wrapper,
 .rechner-container,
 .form-box {
@@ -75,20 +87,26 @@ button[class*="Close"] {
   margin: auto;
 }
 
+/* Headline-Textblöcke */
+.line > p,
+.line > div:not(.cell) {
+  width: 100%;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
 /* Mobil */
 @media (max-width: 768px) {
-  .cell.sp1 {
-    font-size: 1rem;
-    margin-bottom: 4px;
+  .line {
+    flex-direction: column;
   }
 
-  input,
-  select,
-  textarea {
-    font-size: 1rem;
-  }
-
-  .cell.sp2 {
-    margin-bottom: 20px;
+  .cell.sp1,
+  .cell.sp2,
+  .col1-info,
+  .col1-data {
+    flex: 1 1 100%;
+    min-width: unset;
   }
 }
+
