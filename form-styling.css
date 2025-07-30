@@ -139,3 +139,29 @@ button[class*="Close"] {
     min-width: unset;
   }
 }
+
+/* Checkboxen & Radiobuttons linksbündig */
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 8px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.line input[type="checkbox"],
+.line input[type="radio"] {
+  display: inline-block;
+}
+
+/* Zeilen mit Checkboxen oder Radiobuttons links ausrichten */
+.line label {
+  display: inline-flex;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #000;
+}
+
