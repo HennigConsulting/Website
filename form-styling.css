@@ -1,4 +1,4 @@
-/* ==== TARIFCHECK FORMULAR STYLING v13 ==== */
+/* ==== TARIFCHECK FORMULAR STYLING FINAL ==== */
 
 /* Schriftart */
 body {
@@ -17,33 +17,6 @@ body {
   margin: auto;
 }
 
-/* Zeilen */
-.line {
-  margin-top: 20px;
-  margin-bottom: 12px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  text-align: left;
-}
-
-/* Label (z. B. „Gewünschter Versicherungsbeginn“) */
-.cell.sp1 {
-  width: 100%;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #0D244F;
-  margin-bottom: 6px;
-  margin-top: 4px;
-}
-
-/* Input-Bereich */
-.cell.sp2,
-.cell.col1-data {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
 /* Eingabefelder */
 input,
 select,
@@ -56,9 +29,26 @@ textarea {
   border-radius: 8px;
   box-sizing: border-box;
   margin-top: 4px;
+  margin-bottom: 16px;
 }
 
-/* Buttons */
+/* Labels über Eingabefeldern */
+.cell.sp1 {
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #0D244F;
+  margin-bottom: 6px;
+}
+
+/* Label-Wrapper */
+.cell.sp2,
+.cell.col1-data {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Button */
 button,
 input[type="submit"] {
   background-color: #4A86D4;
@@ -76,19 +66,19 @@ input[type="submit"]:hover {
   background-color: #376ab5;
 }
 
-/* Entferne das "X" (Schließen-Button bei Popups) */
+/* Entferne das "X" */
 button[aria-label="Schließen"],
 button[class*="close"],
 button[class*="Close"] {
   display: none !important;
 }
 
-/* Info-Icons optional ausblenden */
+/* Info-Icons ausblenden */
 .cell.sp3 {
   display: none;
 }
 
-/* Paragraphen vor dem Formular */
+/* Paragraphen im Formular */
 .rechner-wrapper p,
 .rechner-container p,
 .form-box p {
@@ -101,35 +91,33 @@ button[class*="Close"] {
   margin-top: 24px;
   font-weight: bold;
 }
-/* Checkboxen & Radiobuttons – korrekt linksbündig */
+
+/* === Checkboxen und Radiobuttons korrekt links ausgerichtet === */
 input[type="checkbox"],
 input[type="radio"] {
   display: inline-block;
-  vertical-align: middle;
-  margin: 0 8px 0 0;
-  transform: translateY(2px); /* sorgt für schöne vertikale Ausrichtung */
+  vertical-align: top;
+  margin-right: 8px;
+  margin-top: 4px;
 }
 
-/* Label richtig neben Checkbox oder Radiobutton */
+/* Flex-Layout für Checkbox- und Radiobutton-Labels */
 label {
   display: flex;
   align-items: flex-start;
   gap: 8px;
-  text-align: left;
   line-height: 1.4;
+  text-align: left;
   font-weight: normal;
   margin-bottom: 12px;
+  max-width: 100%;
+  flex-wrap: wrap;
 }
 
-}
-
-/* Optional: spezifische Labels in Checkboxblöcken */
-.erstInfoChkBox,
-.erstInfoChkBox label {
+/* Optional: Abstand unter Checkbox-Gruppen */
+span.erstInfoChkBox {
   display: block;
-  text-align: left !important;
-  font-size: 1rem;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 /* Mobiloptimierung */
@@ -153,59 +141,4 @@ label {
     padding: 1rem;
   }
 }
-/* === Checkboxen und Radiobuttons korrekt linksbündig === */
 
-input[type="checkbox"],
-input[type="radio"] {
-  margin-right: 8px;
-  vertical-align: middle;
-  display: inline-block;
-}
-
-label {
-  display: inline-block;
-  text-align: left;
-  vertical-align: middle;
-  line-height: 1.5;
-  font-weight: normal;
-  max-width: 100%;
-  white-space: normal;
-}
-input[type="checkbox"],
-input[type="radio"] {
-  float: none !important;
-  margin-left: 0 !important;
-}
-
-label {
-  display: flex !important;
-  align-items: center;
-  gap: 8px;
-}
-
-/* =========== RADIO & CHECKBOX LAYOUT FIX ========== */
-
-input[type="checkbox"],
-input[type="radio"] {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 8px;
-  margin-left: 0;
-}
-
-label,
-span.erstInfoChkBox label {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  line-height: 1.4;
-  text-align: left;
-  flex-wrap: wrap;
-  max-width: 100%;
-}
-
-/* Optional: Text nicht zu weit einrücken */
-span.erstInfoChkBox {
-  display: block;
-  margin-bottom: 16px;
-}
