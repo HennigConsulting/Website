@@ -92,33 +92,36 @@ button[class*="Close"] {
   font-weight: bold;
 }
 
-/* === Checkboxen und Radiobuttons korrekt links ausgerichtet === */
+/* Checkboxen und Radiobuttons korrekt darstellen */
 input[type="checkbox"],
 input[type="radio"] {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 8px;
-  margin-top: 4px;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  margin-right: 8px !important;
+  margin-top: 2px !important;
+  float: none !important;
 }
 
-/* Flex-Layout für Checkbox- und Radiobutton-Labels */
+/* Labels korrekt formatieren */
 label {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  line-height: 1.4;
-  text-align: left;
-  font-weight: normal;
-  margin-bottom: 12px;
-  max-width: 100%;
-  flex-wrap: wrap;
+  display: inline-block !important;
+  text-align: left !important;
+  vertical-align: middle !important;
+  line-height: 1.4 !important;
+  font-weight: normal !important;
+  max-width: 100% !important;
+  white-space: normal !important;
 }
 
-/* Optional: Abstand unter Checkbox-Gruppen */
+/* Falls umgeben von <span> */
 span.erstInfoChkBox {
-  display: block;
+  display: block !important;
   margin-bottom: 16px;
 }
+
+
+
+
 
 /* Mobiloptimierung */
 @media (max-width: 768px) {
