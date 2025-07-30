@@ -1,54 +1,82 @@
-/* ==== TARIFCHECK FORMULAR STYLING ==== */
+/* ==== TARIFCHECK FORMULAR STYLING V2 ==== */
 
 /* Schriftart */
 body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Zeilenaufbau für Label + Eingabefeld nebeneinander */
+/* Zeilenaufbau */
 .line {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  margin-top: 20px;
-  gap: 1rem;
+  margin-top: 16px;
+  gap: 0.5rem;
 }
 
-/* Label links */
+/* Label */
 .cell.sp1 {
   flex: 1 1 30%;
   font-size: 1rem;
   font-weight: 500;
   color: #0D244F;
-  padding-top: 12px;
-  min-width: 180px;
+  padding-top: 6px;
+  min-width: 160px;
+  margin-bottom: 4px;
 }
 
-/* Tooltip rechts neben Label (Infoicon) */
+/* Infoicon */
 .col1-info {
   flex: 0 0 auto;
-  padding-top: 14px;
-}
-
-/* Eingabefeld rechts */
-.cell.sp2,
-.col1-data {
-  flex: 1 1 60%;
-  margin-bottom: 20px;
-  min-width: 220px;
+  padding-top: 8px;
 }
 
 /* Eingabefeld */
+.cell.sp2,
+.col1-data {
+  flex: 1 1 65%;
+  margin-bottom: 12px;
+  min-width: 220px;
+}
+
+/* Eingabefeld Styling */
 input,
 select,
 textarea {
   width: 100%;
-  padding: 10px;
+  padding: 8px;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
   box-sizing: border-box;
   margin-top: 4px;
+}
+
+/* Radiobuttons & Checkboxen */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.line input[type="radio"],
+.line input[type="checkbox"] {
+  display: inline-block;
+}
+
+.line label {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 4px;
+}
+
+/* Radiobutton-Zeilen */
+.line label[for]:has(input[type="radio"]),
+.line label[for]:has(input[type="checkbox"]) {
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  gap: 0.5rem;
 }
 
 /* Button */
@@ -68,14 +96,14 @@ input[type="submit"]:hover {
   background-color: #376ab5;
 }
 
-/* Entferne das "X" */
+/* Entferne "X" */
 button[aria-label="Schließen"],
 button[class*="close"],
 button[class*="Close"] {
   display: none !important;
 }
 
-/* Formularcontainer */
+/* Formularbox */
 .rechner-wrapper,
 .rechner-container,
 .form-box {
@@ -87,12 +115,14 @@ button[class*="Close"] {
   margin: auto;
 }
 
-/* Headline-Textblöcke */
+/* Textblöcke */
 .line > p,
 .line > div:not(.cell) {
   width: 100%;
   margin-bottom: 8px;
   font-size: 1rem;
+  line-height: 1.4;
+  text-align: left;
 }
 
 /* Mobil */
@@ -109,4 +139,3 @@ button[class*="Close"] {
     min-width: unset;
   }
 }
-
