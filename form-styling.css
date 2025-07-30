@@ -1,82 +1,52 @@
-/* ==== TARIFCHECK FORMULAR STYLING V2 ==== */
+/* ==== TARIFCHECK FORMULAR STYLING ==== */
 
 /* Schriftart */
 body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Zeilenaufbau */
+/* Zeilenblock */
 .line {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
   margin-top: 16px;
-  gap: 0.5rem;
-}
-
-/* Label */
-.cell.sp1 {
-  flex: 1 1 30%;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #0D244F;
-  padding-top: 6px;
-  min-width: 160px;
-  margin-bottom: 4px;
-}
-
-/* Infoicon */
-.col1-info {
-  flex: 0 0 auto;
-  padding-top: 8px;
-}
-
-/* Eingabefeld */
-.cell.sp2,
-.col1-data {
-  flex: 1 1 65%;
   margin-bottom: 12px;
-  min-width: 220px;
 }
 
-/* Eingabefeld Styling */
+/* Eingabefelder */
 input,
 select,
 textarea {
+  display: block;
   width: 100%;
-  padding: 8px;
+  padding: 10px;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
   box-sizing: border-box;
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
-/* Radiobuttons & Checkboxen */
-input[type="radio"],
-input[type="checkbox"] {
-  margin-right: 8px;
-  vertical-align: middle;
+/* Label-Styling */
+.cell.sp1 {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+  margin-top: 10px;
+  color: #0D244F;
 }
 
-.line input[type="radio"],
-.line input[type="checkbox"] {
-  display: inline-block;
+/* Eingabefeld-Wrapper */
+.cell.sp2 {
+  display: block;
+  margin-bottom: 20px;
 }
 
-.line label {
-  display: inline-block;
-  vertical-align: middle;
-  margin-bottom: 4px;
-}
-
-/* Radiobutton-Zeilen */
-.line label[for]:has(input[type="radio"]),
-.line label[for]:has(input[type="checkbox"]) {
-  display: flex;
-  align-items: flex-start;
-  text-align: left;
-  gap: 0.5rem;
+/* Abstand nach erklärenden Texten */
+.rechner-container p,
+.rechner-wrapper p,
+.form-box p {
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
 
 /* Button */
@@ -84,84 +54,80 @@ button,
 input[type="submit"] {
   background-color: #4A86D4;
   color: #fff;
-  padding: 10px 20px;
+  padding: 12px 24px;
   font-size: 1rem;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: 20px;
 }
 button:hover,
 input[type="submit"]:hover {
   background-color: #376ab5;
 }
 
-/* Entferne "X" */
+/* Entferne das "X" */
 button[aria-label="Schließen"],
 button[class*="close"],
 button[class*="Close"] {
   display: none !important;
 }
 
-/* Formularbox */
+/* Formular-Box */
 .rechner-wrapper,
 .rechner-container,
 .form-box {
   background-color: #f5f7f9;
-  padding: 1.5rem;
+  padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   max-width: 900px;
   margin: auto;
 }
 
-/* Textblöcke */
-.line > p,
-.line > div:not(.cell) {
-  width: 100%;
-  margin-bottom: 8px;
+/* Checkboxen & Radiobuttons linksbündig */
+.erstInfoChkBox label,
+label[for="mrmoErstinfo"],
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  text-align: left;
   font-size: 1rem;
   line-height: 1.4;
-  text-align: left;
+  color: #000;
+  margin-bottom: 16px;
+}
+
+.erstInfoChkBox input[type="checkbox"],
+input[type="radio"] {
+  margin-top: 3px;
+  flex-shrink: 0;
 }
 
 /* Mobil */
 @media (max-width: 768px) {
-  .line {
-    flex-direction: column;
+  .cell.sp1 {
+    font-size: 1rem;
+    margin-bottom: 6px;
   }
 
-  .cell.sp1,
-  .cell.sp2,
-  .col1-info,
-  .col1-data {
-    flex: 1 1 100%;
-    min-width: unset;
+  input,
+  select,
+  textarea {
+    font-size: 1rem;
   }
-}
 
-/* Checkboxen & Radiobuttons linksbündig */
-input[type="checkbox"],
-input[type="radio"] {
-  margin-right: 8px;
-  vertical-align: middle;
-  display: inline-block;
-}
+  .cell.sp2 {
+    margin-bottom: 16px;
+  }
 
-.line input[type="checkbox"],
-.line input[type="radio"] {
-  display: inline-block;
-}
-
-/* Zeilen mit Checkboxen oder Radiobuttons links ausrichten */
-.line label {
-  display: inline-flex;
-  align-items: flex-start;
-  text-align: left;
-  width: 100%;
-  gap: 8px;
-  margin-bottom: 8px;
-  font-size: 1rem;
-  color: #000;
+  .rechner-wrapper,
+  .rechner-container,
+  .form-box {
+    padding: 1rem;
+  }
 }
 
