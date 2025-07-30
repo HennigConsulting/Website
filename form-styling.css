@@ -183,3 +183,29 @@ label {
   gap: 8px;
 }
 
+/* =========== RADIO & CHECKBOX LAYOUT FIX ========== */
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  margin-left: 0;
+}
+
+label,
+span.erstInfoChkBox label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.4;
+  text-align: left;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+/* Optional: Text nicht zu weit einrücken */
+span.erstInfoChkBox {
+  display: block;
+  margin-bottom: 16px;
+}
